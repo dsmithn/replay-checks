@@ -1,0 +1,145 @@
+[
+ {
+  "id": "P0",
+  "control": "genuine certificate, bound rounded up",
+  "sha256": "dbca822baa7c8a20d05451b56de2dd77c032e88fa945d4e243d0a785787202d3",
+  "printed": "1.4540711000681049",
+  "expect": "ACCEPT",
+  "A": "ACCEPT",
+  "A_reason": "",
+  "B": "ACCEPT",
+  "B_reason": ""
+ },
+ {
+  "id": "C1",
+  "control": "one height changed by +1 (cell 100)",
+  "sha256": "b2645714bbaae547bf9aae484c7c1f38528b4d8278766fe38c23ecd5282e0085",
+  "printed": "1.4540711000681049",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F4: Q = 132922799634443739194977779648560691200/91414236640985428852294626963038737729 differs from the claimed 2126764794151099826377000761030316851",
+  "B": "REJECT",
+  "B_reason": ""
+ },
+ {
+  "id": "C2",
+  "control": "one height near the deciding diagonal lowered by 2^40",
+  "sha256": "d67524aef729c595faa768b80ccded0390a6c62771af198a243ab66348663ec7",
+  "printed": "1.4540711000681049",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F4: Q = 531693691097632922841241215735118131200/365656904513871636718850275143151186561 differs from the claimed 212676479415109982637700076103031685",
+  "B": "REJECT",
+  "B_reason": ""
+ },
+ {
+  "id": "C3",
+  "control": "first height written as a float (x.0)",
+  "sha256": "33656160b703b330821edc8eb89335bdd9755f6c6964502f1b0f74480d13e879",
+  "printed": "1.4540711000681049",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F1: non-integer number '17612588903005780.0'\"",
+  "B": "REJECT",
+  "B_reason": ""
+ },
+ {
+  "id": "C4",
+  "control": "last height changed so that the integral S is 0",
+  "sha256": "4b97f374f061178f6b7fa5272e673256b9a413c1dd0c3229cf40af83e1133f1a",
+  "printed": "1.4540711000681049",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F2: S = 0\"",
+  "B": "REJECT",
+  "B_reason": ""
+ },
+ {
+  "id": "C5",
+  "control": "last cell removed (n = 51199)",
+  "sha256": "6111635d73709f442a183f057a1311dc77cec5a8ad5a46d723f82b9416473626",
+  "printed": "1.4540711000681049",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F1: n = 51199, expected 51200\"",
+  "B": "REJECT",
+  "B_reason": ""
+ },
+ {
+  "id": "C6",
+  "control": "cells reversed (Q unchanged, maximum moves to k = 2n-2-12511)",
+  "sha256": "4974280cdc6ab4fcaa4697575fd64c36a6ede01aa09dd4adcc53217d87eec61c",
+  "printed": "1.4540711000681049",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F4: claimed k = 12511 does not attain M (argmax [89887])\"",
+  "B": "REJECT",
+  "B_reason": ""
+ },
+ {
+  "id": "C7",
+  "control": "an extra top-level key",
+  "sha256": "4398ccb9e5b8eece99deb671bcc21cfa2b2ff8b52fd8c4b774f3ab63fb73d4ed",
+  "printed": "1.4540711000681049",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F1: top level must be an object with exactly the key 'values'\"",
+  "B": "REJECT",
+  "B_reason": ""
+ },
+ {
+  "id": "C8",
+  "control": "genuine certificate, bound 1e-15 below the exact value",
+  "sha256": "dbca822baa7c8a20d05451b56de2dd77c032e88fa945d4e243d0a785787202d3",
+  "printed": "1.454071100068103835",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F5: Q exceeds the printed bound 1.454071100068103835 by 1.000e-15\"",
+  "B": "REJECT",
+  "B_reason": ""
+ },
+ {
+  "id": "C9",
+  "control": "genuine certificate, wrong stated hash",
+  "sha256": "dbca822baa7c8a20d05451b56de2dd77c032e88fa945d4e243d0a785787202d3",
+  "printed": "1.4540711000681049",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F1: sha256 dbca822baa7c8a20d05451b56de2dd77c032e88fa945d4e243d0a785787202d3 != stated 000000000000000000000000000000000000000000000000000000000000000",
+  "B": "REJECT",
+  "B_reason": ""
+ },
+ {
+  "id": "C10",
+  "control": "genuine certificate, bound as printed in the PR",
+  "sha256": "dbca822baa7c8a20d05451b56de2dd77c032e88fa945d4e243d0a785787202d3",
+  "printed": "1.4540711000681048",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F5: Q exceeds the printed bound 1.4540711000681048 by 3.548e-17\"",
+  "B": "REJECT",
+  "B_reason": ""
+ },
+ {
+  "id": "P1",
+  "control": "every height negated (Q is invariant)",
+  "sha256": "455680d276fe63981cf22d159e554cf2ee48079927c2a4f281bf8c7ccf00cc8d",
+  "printed": "1.4540711000681049",
+  "expect": "ACCEPT",
+  "A": "ACCEPT",
+  "A_reason": "",
+  "B": "ACCEPT",
+  "B_reason": ""
+ },
+ {
+  "id": "C11",
+  "control": "a height written as a JSON string",
+  "sha256": "1f9e26775fab3a2c87abdf0428c97bff044f5550fbdc657595b5976ed219802b",
+  "printed": "1.4540711000681049",
+  "expect": "REJECT",
+  "A": "REJECT",
+  "A_reason": "\"reason\": \"F1: values[0] is str, not an integer\"",
+  "B": "REJECT",
+  "B_reason": ""
+ }
+]
